@@ -104,7 +104,8 @@ if(__name__ == '__main__'):
     # 切换回Shadowsock目录
     os.chdir(olddir)
     # 把配置文件'gui-config.json'删除
-    os.remove('gui-config.json')
+    if(os.path.exists('gui-config.json')):
+        os.remove('gui-config.json')
     # 将config数据写入新的文件中
     try:
         file_object = open('gui-config.json', 'w')
