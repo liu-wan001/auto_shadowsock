@@ -1,6 +1,6 @@
 ## 背景
 为了翻墙，又不想买VPN账号  
-一直用的http://freess.cx翻墙，该网站将服务器信息、账号、密码等放在了二维码图片中  
+一直用的https://my.freess.org/翻墙，该网站将服务器信息、账号、密码等放在了二维码图片中  
 每天都改变密码，新的密码也存在二维码图片中  
 所以就需要每天登录扫描二维码翻墙  
 扫的多了就变懒了，想要一劳永逸  
@@ -20,13 +20,13 @@
 
 ## 二维码图片地址
 Japan：  
-https://freess.cx/images/servers/jp01.png  
-https://freess.cx/images/servers/jp02.png  
-https://freess.cx/images/servers/jp03.png  
+https://my.freess.org/images/servers/jp01.png  
+https://my.freess.org/images/servers/jp02.png  
+https://my.freess.org/images/servers/jp03.png  
 America：  
-https://freess.cx/images/servers/us01.png  
-https://freess.cx/images/servers/us02.png  
-https://freess.cx/images/servers/us03.png  
+https://my.freess.org/images/servers/us01.png  
+https://my.freess.org/images/servers/us02.png  
+https://my.freess.org/images/servers/us03.png  
 
 
 ### 识别二维码
@@ -38,13 +38,13 @@ aes-256-cfb:94590911@159.203.202.251:443
 - 技术点
     - 寻找配置文件保存位置
     - 从图片中识别二维码中的信息
-    - 每天更新后替换配置文件中的信息
-    - 如何判断翻墙成功、TCP连接判断
+    - 更新后替换配置文件中的信息
+    - 如何判断翻墙成功、TCP连接判断 (暂未实现)
 - 解决思路
     - 配置文件在当前目录gui-config.json中
     - 知乎专栏有相关介绍https://zhuanlan.zhihu.com/p/21292914
     - 固定格式 仿写
-    - python TCP连接
+    - python requests 连接 google
 ### 最终实现
 - 没有使用编码实现解析图片中的二维码，通过zbar库中提供的zbarimg.exe直接调用解析图片二维码
 - 使用[CSDN博客](http://blog.csdn.net/dkcgx/article/details/46966503)查到的requests库下载二维码图片
