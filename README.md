@@ -1,3 +1,10 @@
+## 使用
+- 代码由python3语法环境下编写
+- 使用的requests库（pip install requests）
+- 如果无法连接请访问[https://my.freess.org](https://my.freess.org)自行扫码连接。
+- 扫码方法：网页中点开二维码图片，右键右下角shadowsocks图标（小飞机），然后选择服务器->扫描屏幕上的二维码
+- 此网站更新密码时间可能有误，网站上说每日0点更新，但是有时就连不上了，连不上可以重新运行一下脚本或者重新扫一下网站二维码获取新的服务器密码。
+
 ## 背景
 为了翻墙，又不想买VPN账号  
 一直用的[https://my.freess.org](https://my.freess.org)翻墙，该网站将服务器信息、账号、密码等放在了二维码图片中  
